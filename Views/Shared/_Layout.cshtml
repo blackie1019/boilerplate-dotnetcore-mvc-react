@@ -9,5 +9,11 @@
 <body>
     @RenderBody()
     @RenderSection("Scripts", required: false)
+    <environment names="Development">
+      <script src="http://localhost:8081/bundle.js"></script>
+    </environment>
+    <environment names="Staging,Production">
+      <script src="~/dist/js/bundle.js"></script>
+    </environment>
 </body>
 </html>
